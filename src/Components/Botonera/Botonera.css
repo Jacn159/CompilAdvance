@@ -1,0 +1,6 @@
+.botonera {
+
+  display: flex;
+  gap: 5vh;
+  transform: rotate(-210deg);
+}
