@@ -1,12 +1,20 @@
 import "./Campotexto.css";
 
 const CampoTexto = (props) => {
+  const meow = () => {
+    if (props.prendido !== false) {
+      props.cards(!props.valorCards);
+
+    }
+  };
+  
   const manejarEnvio = (e) => {
     return props.actualizarValor(e.target.value);
   };
+
   return (
     <div className="campotexto">
-      <textarea disabled className="meow" />
+      <span className="meow" onClick={meow} />
       <input
         type="text"
         value={props.valor}
@@ -17,4 +25,5 @@ const CampoTexto = (props) => {
     </div>
   );
 };
+
 export default CampoTexto;

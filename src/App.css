@@ -1,23 +1,25 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-.box {
-  background-color: mediumorchid;
-  width: 20vh;
-  height: 20vh;
-  padding: 1rem;
-}
+
+@import url("https://fonts.cdnfonts.com/css/gameboy-gamegirl?styles=7915");
+
 body {
+  zoom: 1.05;
   text-align: center;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   overflow: hidden;
-  background-image: radial-gradient(circle at left, #000000, #4b0082);
-  font-family: tahoma;
+  /* background-image: radial-gradient(circle at left, #000000, #4b0082); */
+  padding: 0;
+  margin: 0;
+  user-select: none;
+  font-family: "Gameboy Gamegirl";
+  background-color: black;
 }
+
 .fondo {
   background: url("../img/fondo.png");
   width: 140vh;
@@ -28,18 +30,18 @@ body {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  gap: 4vh;
+  zoom: 0.95;
 }
 
-
 .left,
-.right {
+.rigth {
   width: 20%;
-
 }
 
 #trapecio {
   display: flex;
-  width: 70vh;
+  width: 60%;
   height: 52vh;
   background-color: black;
   transform: perspective(98vh) rotateX(22deg);
@@ -49,26 +51,61 @@ body {
   border-radius: 5vh;
   padding: 2vh;
   flex-direction: column;
-  margin-left: -5vh;
-  margin-top: -8vh;
-
+  margin: auto;
+  margin-left: 4vh;
+  margin-top: 13vh;
 }
 #pantalla {
-
-
-  box-shadow: 0px 0px 2000px rgba(0, 0, 0, 0.5), 0px 0px 20px rgba(0, 0, 0, 0.5) inset;
+  box-shadow: 0px 0px 2000px rgba(0, 0, 0, 0.5),
+    0px 0px 20px rgba(0, 0, 0, 0.5) inset;
   height: 44vh;
   width: 57vh;
   transform: perspective(98vh) rotateX(-20deg);
-  background-color: skyblue;
   border-radius: 0.5rem;
 }
-#Name{
-  margin-top: -0vh;
+#Name {
   margin-bottom: -4vh;
   display: flex;
   color: white;
   font-size: 18px;
-  font-family: "GBA Advance","Bitstream Vera Sans Mono";
+  font-family: tahoma;
+}
+.rigth {
+  display: block;
+  margin: auto;
+  margin-right: 4vh;
+}
 
+.power {
+  display: flex;
+  width: 0.2vh;
+  height: 1vh;
+
+  background: none;
+
+  padding: 0.6vh 1vh;
+  border-radius: 100%;
+  border: 0.3vh solid black;
+
+  cursor: pointer;
+  user-select: none;
+  position: absolute;
+  top: 13.5vh;
+  right: 30.5vh;
+  border: none;
+}
+.integrantes {
+  height: 100%;
+}
+.cargando {
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+
+}
+.cargando p {
+  margin: auto;
+  font-weight: 800;
+  font-size: 5vh;
 }

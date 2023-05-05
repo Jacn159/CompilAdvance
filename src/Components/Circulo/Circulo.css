@@ -1,5 +1,5 @@
 .circulo{
-    background-color: #D5D5D5;
+
     border-radius: 100%;
     height: 10vh;
     width: 10vh;
@@ -8,16 +8,11 @@
     align-items: center;
     box-shadow: 1px 1px 40px rgba(0, 0, 0, 0.5);
     margin: auto;
-    margin-top: 12vh;
-    transition: all 0.3s ease-in-out; /* Agregamos una transición para que el efecto de hover sea suave */
+
+   
   }
   
-  .circulo:hover{
-    transform: scale(1.2);
-    opacity: 0.8;
-    box-shadow: 8px 8px 8px black;
-  }
-  
+
   .profundidad{
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5),
                 0px 0px 30px rgba(0, 0, 0, 0.5) inset;

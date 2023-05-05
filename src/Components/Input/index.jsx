@@ -1,21 +1,28 @@
 import { useState, useEffect } from "react";
 import CampoTexto from "../Campotexto/Campotexto";
-
 const Input = (props) => {
   const [palabra, setPalabra] = useState("");
-  const manejarEnvio = (e) => {
-    e.preventDefault();
-  };
-  useEffect(
-    (e) => {
+
+  useEffect(() => {
+    if (!props.borrar) {
+      setPalabra("");
+    } else {
       props.resultado(palabra);
-    },
-    [palabra]
-  );
+    }
+  }, [palabra, props.borrar]);
+
+
 
   return (
-    <form onSubmit={manejarEnvio}>
-      <CampoTexto valor={palabra} actualizarValor={setPalabra}></CampoTexto>
+    <form onSubmit={(e) => e.preventDefault()}>
+      <CampoTexto
+        valor={palabra}
+        actualizarValor={setPalabra}
+        cards={props.cards}
+        valorCards={props.valorCards}
+        prendido={props.prendido}
+        setBorrar={props.setBorrar}
+      />
     </form>
   );
 };

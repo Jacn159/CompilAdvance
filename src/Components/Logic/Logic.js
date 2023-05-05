@@ -43,7 +43,7 @@ const Mostrar = (palabra) => {
     }
     return valor3
       ? "Si cumple con los requerimientos."
-      : "No cumple, porque en medio solo deben ir letras o vacío.";
+      : "No cumple con los requerimientos.";
   } else return "No cumple con las comillas";
 };
 
